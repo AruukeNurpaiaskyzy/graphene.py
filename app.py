@@ -48,10 +48,44 @@ schema = graphene.Schema(query = MyQuery, mutation = MyMutations)
 
 # print(result.data)
 
+# result = schema.execute(
+#     '''
+#     mutation {
+#         deleteUser(id: "1" ) {
+#             user {
+#                 id
+#                 name
+#                 email
+#                 password
+#             }
+#         }
+#     }
+#     '''
+# )
+
+# print(result.data)
+
+# result = schema.execute(
+#     '''
+#     query {
+#         deleteUser(id: "1" ) {
+#             user {
+#                 id
+#                 name
+#                 email
+#                 password
+#             }
+#         }
+#     }
+#     '''
+# )
+
+# print(result.data)
+
 result = schema.execute(
     '''
-    mutation {
-        deleteUser(id: "1" ) {
+    query {
+        deleteUser {
             user {
                 id
                 name
